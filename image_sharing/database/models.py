@@ -7,5 +7,5 @@ class ImageShare(Base):
     __tablename__ = 'image_share'
 
     id = Column(Integer, primary_key=True, index=True)
-    owner_id = Column(Integer)
-    shared_to = Column(ARRAY(String))
+    image_id = Column(Integer)
+    shared_to = Column(Integer)

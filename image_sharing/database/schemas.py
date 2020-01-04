@@ -2,16 +2,17 @@ from pydantic import BaseModel
 
 
 class ImageShareBase(BaseModel):
-    owner_id: int
-    shared_to: list
+    pass
 
 
 class ImageShareCreate(ImageShareBase):
-    pass
+    shared_to_list: list
 
 
 class ImageShare(ImageShareBase):
     id: int
+    image_id: int
+    shared_to: int
 
     class Config:
         orm_mode = True
